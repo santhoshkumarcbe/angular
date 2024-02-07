@@ -1,0 +1,32 @@
+
+    <h2>User Registration</h2>
+    <body>
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" >
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" formControlName="emailId" required><br>
+
+        <label for="fullName">Full Name:</label>
+        <input type="text" id="fullName" name="fullName" formControlName="fullName" required><br>
+
+        <label for="mobileNumber">Mobile Number:</label>
+        <input type="tel" id="mobileNumber" name="mobileNumber" formControlName="mobileNumber" required><br>
+
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" formControlName="userName" required><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" formControlName="passwordHash" required><br>
+
+        <label for="userRole">User Role:</label>
+        <select id="userRole" name="userRole" formControlName="userRole" required>
+            <option value="admin">Admin</option>
+            <option value="manager">Manager</option>
+            <option value="contributor">Contributor</option>
+        </select><br>
+
+        <button type="submit">Register</button>
+    </form>
+
+</body>
+
+

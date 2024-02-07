@@ -1,0 +1,88 @@
+
+<app-header></app-header>
+<br>
+<br>
+<body>
+
+    <nav>
+        <a href="/test">nav link 1</a>
+    </nav>
+
+    <section>
+        <h2>User Search</h2>
+        <input type="text" id="userSearch" placeholder="Search users...">
+        <button onclick="searchUsers()">Search</button>
+
+        <!-- Display search results for users -->
+        <table>
+            <thead>
+                <tr>
+                    <th>User ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Action</th>
+                    <!-- Add more columns as needed -->
+                </tr>
+            </thead>
+            <tbody id="userResults">
+                <!-- Display user search results here -->
+                <tr>
+                    <td>1</td>
+                    <td>John Doe</td>
+                    <td>john.com</td>
+                    <td><button class="edit-btn" onclick="editUser(1)">Edit</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section>
+        <h2>Task Search</h2>
+        <input type="text" id="taskSearch" placeholder="Search tasks...">
+        <button onclick="searchTasks()">Search</button>
+
+        <!-- Display search results for tasks -->
+        <table>
+            <thead>
+                <tr>
+                    <th>Task ID</th>
+                    <th>Title</th>
+                    <th>Status</th>
+                    <!-- Add more columns as needed -->
+                </tr>
+            </thead>
+            <tbody id="taskResults">
+                <!-- Display task search results here -->
+            </tbody>
+        </table>
+    </section>
+
+    <section>
+        <h2>Assignment Search</h2>
+        <input type="text" id="assignmentSearch" placeholder="Search assignments...">
+        <button onclick="searchAssignments()">Search</button>
+
+        <!-- Display search results for assignments -->
+        <table>
+            <thead>
+                <tr>
+                    <th>Assignment ID</th>
+                    <th>Task ID</th>
+                    <th>User ID</th>
+                    <!-- Add more columns as needed -->
+                </tr>
+            </thead>
+            <tbody id="assignmentResults">
+                <!-- Display assignment search results here -->
+            </tbody>
+        </table>
+    </section>
+
+</body>
+
+
+<br>
+<br>
+<app-footer></app-footer>
+
+

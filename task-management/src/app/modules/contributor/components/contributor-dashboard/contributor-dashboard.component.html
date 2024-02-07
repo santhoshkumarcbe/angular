@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contributor Page</title>
+    <!-- Add Angular scripts here -->
+    <!-- Example using CDN for Angular 12 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular/12.0.0/angular.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h2>Task Details</h2>
+        <div class="task-details">
+            <label for="taskTitle">Task Title:</label>
+            <div id="taskTitle">{{ task.title }}</div>
+            
+            <label for="taskDescription">Task Description:</label>
+            <div id="taskDescription">{{ task.description }}</div>
+            
+            <label for="dueDate">Due Date:</label>
+            <div id="dueDate">{{ task.dueDate }}</div>
+            
+            <label for="taskStatus">Task Status:</label>
+            <div id="taskStatus">{{ task.status }}</div>
+            
+            <button (click)="openUpdateStatusPopup()">Update Status</button>
+            <button (click)="openChatWithManager()">Chat with Manager</button>
+        </div>
+
+        <!-- Angular update status popup -->
+        <div class="popup-overlay" *ngIf="updateStatusPopup">
+            <div class="popup">
+                <h3>Update Your Status</h3>
+                <input type="text" [(ngModel)]="newStatus" placeholder="Enter your status">
+                <button (click)="updateStatus()">Submit</button>
+                <button (click)="closeUpdateStatusPopup()">Close</button>
+            </div>
+        </div>
+    </div>

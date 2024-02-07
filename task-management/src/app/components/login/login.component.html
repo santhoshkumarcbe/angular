@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager Login</title>
+
+</head>
+<body>
+    <div class="login-container">
+        <div class="logo">
+            <img src="assets/chillwaves.png" alt="Company Logo" width="80">
+        </div>
+        <h2 class="title">Chillwaves collab</h2>
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+            <div class="input-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" formControlName="userName"  required>
+            </div>
+            <div class="input-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password"  formControlName="password" required>
+            </div>
+            <button type="submit" class="login-btn" >Login</button>
+        </form>
+    </div>
+</body>
+</html>
+
